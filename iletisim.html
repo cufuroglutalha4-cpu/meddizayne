@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>İletişim – Meddizayne</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meddizayne ile Duchesse Satin Art ve İtalyan dekoratif boya uygulamaları için teklif ve keşif randevusu talep edin.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <div class="container navbar">
+    <a href="index.html" class="logo-area">
+      <img src="assets/med-dizayn-logo-gold-on-dark-hires.png"
+           alt="Med Dizayn Logo"
+           class="logo-img">
+      <span class="logo-wordmark">MEDDIZAYNE</span>
+    </a>
+
+    <button class="nav-toggle" aria-label="Menüyü aç/kapat">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav-links">
+      <a href="index.html">Ana Sayfa</a>
+      <a href="duchesse-satin-art.html">Duchesse Satin Art</a>
+      <a href="italyan-boya.html">İtalyan Boya</a>
+      <a href="iletisim.html" class="active">İletişim</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+    <!-- SAYFA BAŞI -->
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="page-title">İletişim &amp; Teklif Formu</h1>
+            <p class="page-subtitle">
+                Duchesse Satin Art veya İtalyan dekoratif boya uygulaması için keşif, fiyat teklifi
+                ya da genel sorularınız varsa aşağıdaki kanallardan bize ulaşabilirsiniz.
+            </p>
+        </div>
+    </section>
+
+    <!-- İLETİŞİM BLOKLARI -->
+    <section class="section">
+        <div class="container contact-grid">
+            <!-- Sabit iletişim bilgileri -->
+            <div class="contact-card">
+                <div class="contact-highlight">
+                    Mehmet Deler – Kardeşler Dekorasyon
+                </div>
+
+                <div class="contact-row">
+                    <strong>Telefon / WhatsApp:</strong> 0544 561 0546
+                </div>
+                <div class="contact-row">
+                    <strong>E-posta:</strong> meddizaynee@gmail.com
+                </div>
+                <div class="contact-row">
+                    <strong>Uzmanlık:</strong> Duchesse Satin Art, İtalyan dekoratif boya, iç cephe boya
+                </div>
+
+                <p class="contact-small" style="margin-top:10px;">
+                    Keşif için randevu ile çalışıyoruz. Konum bilgisi, duvar m² ölçüsü ve mümkünse
+                    birkaç fotoğrafla birlikte bize ulaşırsanız çok daha hızlı dönüş yapabiliriz.
+                </p>
+
+                <a class="btn btn-primary" href="https://wa.me/905445610546" target="_blank" style="margin-top:12px; display:inline-flex;">
+                    WhatsApp’tan Yaz
+                </a>
+            </div>
+
+            <!-- Formspree formu -->
+            <div class="contact-card">
+                <div class="contact-highlight">Ön teklif formu</div>
+                <p class="contact-small">
+                    Aşağıdaki formu doldurduğunuzda, bilgileriniz doğrudan e-posta olarak bize iletilir.
+                    Size en kısa sürede geri dönüş yapacağız.
+                </p>
+
+                <form id="contact-form"
+                      action="https://formspree.io/f/ACTION_URL"
+                      method="POST"
+                      style="margin-top:10px; display:grid; gap:8px; font-size:13px;">
+                    <label>
+                        Adınız Soyadınız<br>
+                        <input type="text" name="Ad Soyad" required
+                               style="width:100%; padding:6px 8px; border-radius:6px; border:1px solid var(--border-soft); background:#050505; color:var(--text-main);">
+                    </label>
+
+                    <label>
+                        Telefon Numaranız<br>
+                        <input type="text" name="Telefon" required
+                               style="width:100%; padding:6px 8px; border-radius:6px; border:1px solid var(--border-soft); background:#050505; color:var(--text-main);">
+                    </label>
+
+                    <label>
+                        E-posta Adresiniz <br>
+                        <input type="email" name="E-posta"
+                               style="width:100%; padding:6px 8px; border-radius:6px; border:1px solid var(--border-soft); background:#050505; color:var(--text-main);">
+                    </label>
+
+                    <label>
+                        Proje Adresi / İlçe<br>
+                        <input type="text" name="Adres"
+                               style="width:100%; padding:6px 8px; border-radius:6px; border:1px solid var(--border-soft); background:#050505; color:var(--text-main);">
+                    </label>
+
+                    <label>
+                        Duvar / Alan m² Bilgisi (yaklaşık)<br>
+                        <input type="text" name="Metrekare"
+                               style="width:100%; padding:6px 8px; border-radius:6px; border:1px solid var(--border-soft); background:#050505; color:var(--text-main);">
+                    </label>
+
+                    <label>
+                        Notunuz<br>
+                        <textarea name="Not"
+                                  rows="4"
+                                  style="width:100%; padding:6px 8px; border-radius:6px; border:1px solid var(--border-soft); background:#050505; color:var(--text-main); resize:vertical;"></textarea>
+                    </label>
+
+                    <button type="submit" class="btn btn-outline" style="margin-top:6px; justify-content:center;">
+                        Gönder
+                    </button>
+                </form>
+
+                <p class="contact-small" style="margin-top:10px;">
+                    Formu gönderdikten sonra, başarılı gönderim mesajını Formspree ekranında göreceksiniz.
+                </p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        © <span id="yil"></span> Meddizayne – Duchesse Satin Art &amp; İtalyan Boya
+    </div>
+</footer>
+
+<script>
+  // Yılı otomatik yaz
+  const yilEl = document.getElementById('yil');
+  if (yilEl) {
+    yilEl.textContent = new Date().getFullYear();
+  }
+
+  // Mobil menü aç/kapa
+  const navToggle = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  if (navToggle && navLinks) {
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('is-open');
+      navToggle.classList.toggle('is-open');
+    });
+  }
+</script>
+</body>
+</html>
