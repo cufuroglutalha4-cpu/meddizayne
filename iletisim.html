@@ -73,65 +73,90 @@
                 </a>
             </div>
 
-            <!-- Formspree formu -->
-            <div class="contact-card">
-                <div class="contact-highlight">Ön teklif formu</div>
-                <p class="contact-small">
-                    Aşağıdaki formu doldurduğunuzda, bilgileriniz doğrudan e-posta olarak bize iletilir.
-                    Size en kısa sürede geri dönüş yapacağız.
-                </p>
+         <!-- Formspree formu -->
+<div class="contact-card">
+    <div class="contact-highlight">Ön teklif formu</div>
+    <p class="contact-small">
+        Aşağıdaki formu doldurduğunuzda, bilgileriniz doğrudan e-posta olarak bize iletilir.
+        Size en kısa sürede geri dönüş yapacağız.
+    </p>
 
-                <form id="contact-form"
-                      action="https://formspree.io/f/manrbkdb"
-                      method="POST"
-                      style="margin-top:10px; display:grid; gap:8px; font-size:13px;">
-                    <label>
-                        Adınız Soyadınız<br>
-                        <input type="text" name="Ad Soyad" required
-                               style="width:100%; padding:6px 8px; border-radius:6px; border:1px solid var(--border-soft); background:#050505; color:var(--text-main);">
-                    </label>
+    <!-- BURASI FORMSPREE ENTEGRASYONU -->
+    <form
+      id="contact-form"
+      action="https://formspree.io/f/manrbkdb"
+      method="POST"
+      style="margin-top:10px; display:grid; gap:8px; font-size:13px;"
+    >
+      <label>
+        Adınız Soyadınız<br>
+        <input
+          type="text"
+          name="name"
+          required
+          style="width:100%; padding:6px 8px; border-radius:6px; border:1px solid var(--border-soft); background:#050505; color:var(--text-main);"
+        >
+      </label>
 
-                    <label>
-                        Telefon Numaranız<br>
-                        <input type="text" name="Telefon" required
-                               style="width:100%; padding:6px 8px; border-radius:6px; border:1px solid var(--border-soft); background:#050505; color:var(--text-main);">
-                    </label>
+      <label>
+        Telefon Numaranız<br>
+        <input
+          type="text"
+          name="phone"
+          required
+          style="width:100%; padding:6px 8px; border-radius:6px; border:1px solid var(--border-soft); background:#050505; color:var(--text-main);"
+        >
+      </label>
 
-                    <label>
-                        E-posta Adresiniz <br>
-                        <input type="email" name="E-posta"
-                               style="width:100%; padding:6px 8px; border-radius:6px; border:1px solid var(--border-soft); background:#050505; color:var(--text-main);">
-                    </label>
+      <label>
+        E-posta Adresiniz<br>
+        <input
+          type="email"
+          name="email"
+          style="width:100%; padding:6px 8px; border-radius:6px; border:1px solid var(--border-soft); background:#050505; color:var(--text-main);"
+        >
+      </label>
 
-                    <label>
-                        Proje Adresi / İlçe<br>
-                        <input type="text" name="Adres"
-                               style="width:100%; padding:6px 8px; border-radius:6px; border:1px solid var(--border-soft); background:#050505; color:var(--text-main);">
-                    </label>
+      <label>
+        Proje Adresi / İlçe<br>
+        <input
+          type="text"
+          name="address"
+          style="width:100%; padding:6px 8px; border-radius:6px; border:1px solid var(--border-soft); background:#050505; color:var(--text-main);"
+        >
+      </label>
 
-                    <label>
-                        Duvar / Alan m² Bilgisi (yaklaşık)<br>
-                        <input type="text" name="Metrekare"
-                               style="width:100%; padding:6px 8px; border-radius:6px; border:1px solid var(--border-soft); background:#050505; color:var(--text-main);">
-                    </label>
+      <label>
+        Duvar / Alan m² Bilgisi (yaklaşık)<br>
+        <input
+          type="text"
+          name="area"
+          style="width:100%; padding:6px 8px; border-radius:6px; border:1px solid var(--border-soft); background:#050505; color:var(--text-main);"
+        >
+      </label>
 
-                    <label>
-                        Notunuz<br>
-                        <textarea name="Not"
-                                  rows="4"
-                                  style="width:100%; padding:6px 8px; border-radius:6px; border:1px solid var(--border-soft); background:#050505; color:var(--text-main); resize:vertical;"></textarea>
-                    </label>
+      <label>
+        Notunuz<br>
+        <textarea
+          name="message"
+          rows="4"
+          style="width:100%; padding:6px 8px; border-radius:6px; border:1px solid var(--border-soft); background:#050505; color:var(--text-main); resize:vertical;"
+        ></textarea>
+      </label>
 
-                    <button type="submit" class="btn btn-outline" style="margin-top:6px; justify-content:center;">
-                        Gönder
-                    </button>
-                </form>
+      <!-- İsteğe bağlı: konu satırı -->
+      <input type="hidden" name="_subject" value="Meddizayne web sitesi ön teklif formu">
 
-                <p class="contact-small" style="margin-top:10px;">
-                    Formu gönderdikten sonra, başarılı gönderim mesajını Formspree ekranında göreceksiniz.
-                </p>
-            </div>
-        </div>
+      <button type="submit" class="btn btn-outline" style="margin-top:6px; justify-content:center;">
+        Gönder
+      </button>
+    </form>
+
+    <p class="contact-small" style="margin-top:10px;">
+        Formu gönderdikten sonra başarılı gönderim mesajını Formspree ekranında göreceksiniz.
+    </p>
+</div>
+
     </section>
 </main>
 
@@ -161,5 +186,6 @@
 </script>
 </body>
 </html>
+
 
 
