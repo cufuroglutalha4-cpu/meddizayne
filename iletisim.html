@@ -73,71 +73,90 @@
                 </a>
             </div>
 
-            <!-- mailto + JS formu -->
-            <div class="contact-card">
-                <div class="contact-highlight">Ön teklif formu</div>
-                <p class="contact-small">
-                    Bu formu doldurduğunuzda, bilgileriniz cihazınızdaki e-posta uygulaması üzerinden
-                    <strong>meddizaynee@gmail.com</strong> adresine gönderilmek üzere hazırlanır.
-                </p>
+         <!-- Formspree formu -->
+<div class="contact-card">
+    <div class="contact-highlight">Ön teklif formu</div>
+    <p class="contact-small">
+        Aşağıdaki formu doldurduğunuzda, bilgileriniz doğrudan e-posta olarak bize iletilir.
+        Size en kısa sürede geri dönüş yapacağız.
+    </p>
 
-                <form id="contact-form"
-                      style="margin-top:10px; display:grid; gap:8px; font-size:13px;">
-                    <label>
-                        Adınız Soyadınız<br>
-                        <input type="text" name="Ad Soyad" required
-                               style="width:100%; padding:6px 8px; border-radius:6px; border:1px solid var(--border-soft); background:#050505; color:var(--text-main);">
-                    </label>
+    <!-- BURASI FORMSPREE ENTEGRASYONU -->
+    <form
+      id="contact-form"
+      action="https://formspree.io/f/xpwvlnjg"
+      method="POST"
+      style="margin-top:10px; display:grid; gap:8px; font-size:13px;"
+    >
+      <label>
+        Adınız Soyadınız<br>
+        <input
+          type="text"
+          name="name"
+          required
+          style="width:100%; padding:6px 8px; border-radius:6px; border:1px solid var(--border-soft); background:#050505; color:var(--text-main);"
+        >
+      </label>
 
-                    <label>
-                        Telefon Numaranız<br>
-                        <input type="text" name="Telefon" required
-                               style="width:100%; padding:6px 8px; border-radius:6px; border:1px solid var(--border-soft); background:#050505; color:var(--text-main);">
-                    </label>
+      <label>
+        Telefon Numaranız<br>
+        <input
+          type="text"
+          name="phone"
+          required
+          style="width:100%; padding:6px 8px; border-radius:6px; border:1px solid var(--border-soft); background:#050505; color:var(--text-main);"
+        >
+      </label>
 
-                    <label>
-                        E-posta Adresiniz (opsiyonel)<br>
-                        <input type="email" name="E-posta"
-                               style="width:100%; padding:6px 8px; border-radius:6px; border:1px solid var(--border-soft); background:#050505; color:var(--text-main);">
-                    </label>
+      <label>
+        E-posta Adresiniz<br>
+        <input
+          type="email"
+          name="email"
+          style="width:100%; padding:6px 8px; border-radius:6px; border:1px solid var(--border-soft); background:#050505; color:var(--text-main);"
+        >
+      </label>
 
-                    <label>
-                        Proje Adresi / İlçe<br>
-                        <input type="text" name="Adres"
-                               style="width:100%; padding:6px 8px; border-radius:6px; border:1px solid var(--border-soft); background:#050505; color:var(--text-main);">
-                    </label>
+      <label>
+        Proje Adresi / İlçe<br>
+        <input
+          type="text"
+          name="address"
+          style="width:100%; padding:6px 8px; border-radius:6px; border:1px solid var(--border-soft); background:#050505; color:var(--text-main);"
+        >
+      </label>
 
-                    <label>
-                        Duvar / Alan m² Bilgisi (yaklaşık)<br>
-                        <input type="text" name="Metrekare"
-                               style="width:100%; padding:6px 8px; border-radius:6px; border:1px solid var(--border-soft); background:#050505; color:var(--text-main);">
-                    </label>
+      <label>
+        Duvar / Alan m² Bilgisi (yaklaşık)<br>
+        <input
+          type="text"
+          name="area"
+          style="width:100%; padding:6px 8px; border-radius:6px; border:1px solid var(--border-soft); background:#050505; color:var(--text-main);"
+        >
+      </label>
 
-                    <label>
-                        Notunuz<br>
-                        <textarea name="Not"
-                                  rows="4"
-                                  style="width:100%; padding:6px 8px; border-radius:6px; border:1px solid var(--border-soft); background:#050505; color:var(--text-main); resize:vertical;"></textarea>
-                    </label>
+      <label>
+        Notunuz<br>
+        <textarea
+          name="message"
+          rows="4"
+          style="width:100%; padding:6px 8px; border-radius:6px; border:1px solid var(--border-soft); background:#050505; color:var(--text-main); resize:vertical;"
+        ></textarea>
+      </label>
 
-                    <button type="submit" class="btn btn-outline" style="margin-top:6px; justify-content:center;">
-                        Gönder
-                    </button>
+      <!-- İsteğe bağlı: konu satırı -->
+      <input type="hidden" name="_subject" value="Meddizayne web sitesi ön teklif formu">
 
-                    <!-- Teşekkür mesajı -->
-                    <p id="form-success"
-                       class="contact-small"
-                       style="margin-top:8px; display:none; color:var(--accent);">
-                        Teşekkürler, formunuz hazırlandı. Açılan e-posta penceresinden gönderimi tamamlayabilirsiniz.
-                    </p>
-                </form>
+      <button type="submit" class="btn btn-outline" style="margin-top:6px; justify-content:center;">
+        Gönder
+      </button>
+    </form>
 
-                <p class="contact-small" style="margin-top:10px;">
-                    Not: Gönder butonuna bastığınızda, cihazınızın varsayılan e-posta uygulaması açılır.
-                    Eğer e-posta uygulamanız tanımlı değilse, lütfen WhatsApp üzerinden iletişime geçin.
-                </p>
-            </div>
-        </div>
+    <p class="contact-small" style="margin-top:10px;">
+        Formu gönderdikten sonra başarılı gönderim mesajını Formspree ekranında göreceksiniz.
+    </p>
+</div>
+
     </section>
 </main>
 
@@ -164,53 +183,9 @@
       navToggle.classList.toggle('is-open');
     });
   }
-
-  // Formu mailto ile gönder + teşekkür yazısı + form temizleme
-  const contactForm = document.getElementById('contact-form');
-  const formSuccess = document.getElementById('form-success');
-
-  if (contactForm) {
-    contactForm.addEventListener('submit', function (e) {
-      e.preventDefault(); // sayfanın normal submitini engelle
-
-      const formData = new FormData(contactForm);
-      const adSoyad   = formData.get('Ad Soyad')   || '';
-      const telefon   = formData.get('Telefon')    || '';
-      const email     = formData.get('E-posta')    || '';
-      const adres     = formData.get('Adres')      || '';
-      const metrekare = formData.get('Metrekare')  || '';
-      const not       = formData.get('Not')        || '';
-
-      const subject = encodeURIComponent('Meddizayne web sitesi ön teklif formu');
-      const bodyLines = [
-        `Ad Soyad : ${adSoyad}`,
-        `Telefon  : ${telefon}`,
-        `E-posta  : ${email}`,
-        `Adres    : ${adres}`,
-        `Metrekare: ${metrekare}`,
-        '',
-        'Not:',
-        not
-      ];
-      const body = encodeURIComponent(bodyLines.join('\r\n'));
-
-      // mailto linki ile varsayılan mail uygulamasını aç
-      window.location.href = `mailto:meddizaynee@gmail.com?subject=${subject}&body=${body}`;
-
-      // formu temizle
-      contactForm.reset();
-
-      // teşekkür mesajını göster
-      if (formSuccess) {
-        formSuccess.style.display = 'block';
-      }
-    });
-  }
 </script>
 </body>
 </html>
-
-
 
 
 
